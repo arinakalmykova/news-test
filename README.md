@@ -1,4 +1,3 @@
-```markdown
 # MODX Revo News Project
 
 Проект представляет собой сайт новостей на **MODX Revo 2.8.x** с фронтендом на **React + SASS/SCSS**, реализованным через Vite.
