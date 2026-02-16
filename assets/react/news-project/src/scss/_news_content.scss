@@ -1,0 +1,50 @@
+@use 'variables' as *;
+
+.news-card-content {
+  font-family: $font-main;
+  max-width: $max-width-content;
+  margin: 40px auto;
+  padding: $padding-content;
+  background-color: $color-bg;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 15px $color-shadow;
+
+  h1 {
+    font-size: $font-size-title-content;
+    margin-bottom: 10px;
+    color: $color-text;
+  }
+
+  small {
+    font-size: $font-size-text;
+    color: $color-muted;
+  }
+
+  img {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: $border-radius;
+    box-shadow: 0 2px 10px $color-shadow;
+  }
+
+  div {
+    font-size: $font-size-content;
+    line-height: $line-height-content;
+    color: $color-text;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: $font-size-content;
+    color: $color-text;
+    text-decoration: none;
+    border-bottom: 1px dashed $color-text;
+    transition: 0.3s;
+
+    &:hover {
+      color: $color-shadow;
+      border-bottom-style: solid;
+    }
+  }
+}

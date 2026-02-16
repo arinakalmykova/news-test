@@ -1,0 +1,2 @@
+[2026-02-14 22:16:12] (ERROR in xPDOConnection::connect @ C:\xampp\htdocs\news_test\core\xpdo\xpdo.class.php : 3125) SQLSTATE[HY000] [1045] Access denied for user 'Rikale12345'@'localhost' (using password: YES)
+[2026-02-14 22:16:12] (ERROR @ C:\xampp\htdocs\news_test\setup\includes\tables_create.php : 103) Could not connect to database server: SQLSTATE[HY000] [1045] Access denied for user 'Rikale12345'@'localhost' (using password: YES)

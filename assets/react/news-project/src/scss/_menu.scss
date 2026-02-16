@@ -1,0 +1,119 @@
+@use 'variables' as *;
+
+.mobile-menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: -$menu-left; 
+  width: $menu-width;
+  height: 100%;
+  background: $menu-bg;
+  z-index: 1000;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  padding: 20px;
+  font-family: 'Google Sans', Arial, sans-serif;
+  border-right: 1px solid $menu-border;
+
+  &.active {
+    left: 0;
+  }
+
+  .close-menu {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  .mobile-menu {
+    position: relative;
+
+    .menu-level {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      background: $menu-bg;
+      transition: left $transition-speed ease;
+
+      &.active {
+        left: 0;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        padding: 12px 18px;
+        border-bottom: 1px solid $menu-border;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+          background: $menu-hover;
+        }
+
+        a {
+          text-decoration: none;
+          color: $menu-text;
+        }
+      }
+
+      .back-button {
+        font-weight: bold;
+        cursor: pointer;
+        padding: 12px 18px;
+        background: #f9f9f9;
+        border-bottom: 1px solid $menu-border;
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 999;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width:768px) {
+   .mobile-menu-wrapper {
+    width: 80%;
+    padding: 15px;
+
+    .mobile-menu {
+      .menu-level {
+        li {
+          padding: 15px;
+          font-size: 16px;
+        }
+
+        .back-button {
+          padding: 15px;
+        }
+      }
+    }
+  }
+
+  .overlay {
+    &.active {
+      opacity: 0.5;
+    }
+  }
+}
